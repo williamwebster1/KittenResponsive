@@ -1,0 +1,119 @@
+body {
+	width: 100%;
+	height: 100%;
+	display: block;
+	margin: 0;
+}
+
+.half_page {
+	height: 50%;
+	width: 100%;
+}
+
+/* only use this method to set an image's source will be CHANGING */
+.kitten {content: url("images/kitten-large.png");}
+
+
+.loaf {}
+
+
+@media only screen and (max-width: 650px) {
+	.kitten{
+		opacity: 0;
+	}
+	.toast{
+		content: url("images/kitten-medium.png");
+	}
+	
+	body { 
+		background-color: purple;
+	}
+}
+
+
+@media only screen and (max-width: 500px) {
+	.kitten {
+		content: url("images/kitten-small.png");
+		opacity: 1;
+	}
+	.toast{
+		opacity: 0;
+	}
+	body { 
+		background-color: black;
+	}
+
+}
+
+
+@media only screen and (max-width: 300px) {
+	.kitten {
+		content: url("images/kittyloaf.gif");
+	}
+	.toast {
+		content: url("images/kittyloaf.gif");
+		opacity: 1;
+	}
+	body { 
+		background-color: green;
+	}
+	
+}
+
+
+@media only screen and (max-width: 200px) {
+	.kitten {
+		content: url("images/kittyloaf.gif");
+		background-color: pink;
+	}
+	.toast {
+		content: url("images/kittyloaf.gif");
+		
+	}
+
+}
+@media only screen and (max-width: 150px) {
+	.kitten {
+		content: url("images/kittyloaf.gif");
+
+	}
+	.toast {
+		content: url("images/kittyloaf.gif");
+		background-color: pink;
+	}
+
+}
+
+@media only screen and (max-width: 100px) {
+	.kitten {
+		content: url("images/kittyloaf.gif");
+
+	}
+	.toast {
+		content: url("images/kittyloaf.gif");
+		background-color: pink;
+	}
+	body{
+		background-color:pink;
+	}
+
+}
+
+
+
+
+
+/* Use this class on the PARENT of the <img> you are trying to center */
+/* REMEMBER: the PARENT element tells the CHILD element(s) what to do! */
+/* NOTE: Centering images in DIVs only works when the display property is "flex"! */
+.center-img {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+/* Use this class on any <img> you want to prevent from overflowing it's parent <div>! */
+.contain-img {
+	max-height: 100%;
+	max-width: 100%;
+}
